@@ -1,0 +1,25 @@
+<div class="dashboard_container">
+    <mat-card class="content_wrapper">
+        <button mat-raised-button (click)="openBottomSheet()">Open file</button>
+        <mat-card-subtitle>Dashboard</mat-card-subtitle>
+        <mat-card-header>
+            <mat-card-title>My Medi</mat-card-title>
+            <mat-card-subtitle>Manage your Daily Medicine Doses</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <label for="">Start time</label>
+            <input type="text" [(ngModel)]="startTime">
+            <label for="">Interval</label>
+            <input type="number" [(ngModel)]="intervalHours">
+            <label for="">Total Does</label>
+            <input type="number" [(ngModel)]="totalDoses">
+            <button mat-button
+                (click)="calculateMedicineSchedule(this.startTime, this.intervalHours, this.totalDoses)">Update</button>
+        </mat-card-content>
+        <ul>
+            @for (item of schedule; track $index) {
+            <li>{{item}}</li>
+            }
+        </ul>
+    </mat-card>
+</div>

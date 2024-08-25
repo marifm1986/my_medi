@@ -1,0 +1,18 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    width: 400px !important;
+    max-width: 400px !important;
+    min-width: 400px !important;
+    flex-grow: 0;
+}
+
+.bottom_sheet_container {
+    display: flex;
+    flex-direction: column;
+
+    .mat-mdc-form-field {
+        width: 90%;
+        flex: 1;
+    }
+}
